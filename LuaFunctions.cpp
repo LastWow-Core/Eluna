@@ -768,6 +768,7 @@ ElunaRegister<Player> PlayerMethods[] =
 ElunaRegister<Creature> CreatureMethods[] =
 {
     // Getters
+    { "SetLootRecipient", &LuaCreature::SetLootRecipient },
     { "GetAITarget", &LuaCreature::GetAITarget },
     { "GetAITargets", &LuaCreature::GetAITargets },
     { "GetAITargetsCount", &LuaCreature::GetAITargetsCount },

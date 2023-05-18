@@ -593,6 +593,17 @@ namespace LuaCreature
     }
 
     /**
+     * Establece el loot de la [Criatura] para el [Jugador] dado.
+     */
+    int SetLootRecipient(lua_State* L, Creature* creature)
+    {
+        Player* player = Eluna::CHECKOBJ<Player>(L, 2);
+        bool WithGroup = Eluna::CHECKVAL<bool>(L, 3);
+        creature->SetLootRecipient(player, WithGroup);
+        return 0;
+    }
+
+    /**
      * Returns the [Creature]'s script name.
      *
      * This is used by the core to apply C++ scripts to the Creature.
